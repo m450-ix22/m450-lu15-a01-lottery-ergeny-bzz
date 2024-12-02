@@ -20,7 +20,7 @@ def input_generator():
     return simulate_inputs
 
 
-def test_main_exit(input_generator, capsys, monkeypatch):
+def test_main_exit(capsys, monkeypatch, input_generator):
     """
     Testet die Hauptfunktion mit der Exit-Option.
     """
@@ -35,7 +35,7 @@ def test_main_exit(input_generator, capsys, monkeypatch):
     assert "Beenden" in output
 
 
-def test_main_money(input_generator, capsys, monkeypatch):
+def test_main_money(capsys, monkeypatch, input_generator):
     """
     Testet die Geldtransaktion in der Hauptfunktion.
     """
@@ -50,7 +50,7 @@ def test_main_money(input_generator, capsys, monkeypatch):
     assert "10" in output  # Überprüft, ob der Betrag korrekt verarbeitet wurde
 
 
-def test_main_ticket(input_generator, capsys, monkeypatch):
+def test_main_ticket(capsys, monkeypatch, input_generator):
     """
     Testet die Erstellung eines Lottoscheins.
     """
